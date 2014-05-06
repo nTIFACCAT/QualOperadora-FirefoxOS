@@ -1,0 +1,1 @@
+# QualOperadora - FirefoxOS
