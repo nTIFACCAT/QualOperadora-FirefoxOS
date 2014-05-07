@@ -12,19 +12,19 @@
   <div class="wrapper">
     <form id="main__form">
       <p>
-        <input type="text" id="main__form-phone" placeholder="DDD + Número" required="">
+        <input type="text" id="main__form-phone" placeholder="DDD + Número" required="" onkeyup="mascara( this, mtel );" maxlength="15">
       </p>
 
       <p>
-        <button type="submit" class="recommend">Enviar</button>
+        <button type="submit" class="recommend">Consultar</button>
       </p>
     </form>
 
     <div id="resp">
-      
     </div>
   </div>
 
+  <script type="text/javascript" src="assets/js/util.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>

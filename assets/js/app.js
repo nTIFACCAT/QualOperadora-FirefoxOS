@@ -67,4 +67,8 @@
 
   Operadora.init();
 
+
 })(window, document);
+
+
+
