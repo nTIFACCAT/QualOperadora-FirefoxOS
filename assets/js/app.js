@@ -13,16 +13,11 @@
       var phoneNumber = d.querySelector('#main__form-phone').value,
           xhr = new XMLHttpRequest();
 
-      // Since I am passing through some cross-domains problems, I've build a Mock to simulate te original behavior
-      //xhr.open('GET', 'http://private-61fc-rodrigoknascimento.apiary-mock.com/consulta/5199999999', true);
-
-      xhr.open('GET', './', true);
+      xhr.open('GET', 'http://private-61fc-rodrigoknascimento.apiary-mock.com/consulta/5199999999', true);
 
       xhr.onload = function () {
-        //console.log(xhr.responseText);
-
-        // mock =/
-        var data = JSON.parse('{"telefone": "(51) 9999-9999","operadora": "Vivo - Celular","estado": "Rio Grande do Sul","portabilidade": false}');
+        
+        var data = JSON.parse(xhr.responseText);
 
         if (data) {
 
@@ -65,7 +60,7 @@
       input.addEventListener('focus', function () {
         d.querySelector('#resp').classList.remove('show');
       }, false);
-      
+
     };
 
     var _init = function () {
