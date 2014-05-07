@@ -25,28 +25,25 @@
         var data = JSON.parse('{"telefone": "(51) 9999-9999","operadora": "Vivo - Celular","estado": "Rio Grande do Sul","portabilidade": false}');
 
         if (data) {
-          var tree = '';
-
-          tree += '<p><span>Número:</span> ' + data.telefone + '</p>';
-          tree += '<p><span>Operadora:</span> ' + data.operadora + '</p>';
-          tree += '<p><span>Portabilidade:</span> ' + data.portabilidade === true ? 'Sim' : 'Não' + '</p>';
-          tree += '<p><span>Estado:</span> ' + data.estado + '</p>';
 
           d.querySelector('#resp-content').innerHTML = data.operadora;
           d.querySelector('#resp').classList.add('show');
+
         } else {
+
           d.querySelector('#resp').innerHTML = 'Não encontramos nenhum registro';
+        
         }
 
       };
 
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.send();
+
     };
 
 
     var _bindSubmit = function () {
-      //http://private-61fc-rodrigoknascimento.apiary-mock.com/consulta/5199999999
 
       var form = d.querySelector('#main__form');
 
@@ -61,12 +58,14 @@
     };
 
     var _bindInputFocus = function () {
+      
       var input = d.querySelector('#main__form-phone');
 
       // hide resp when the keybord goes into the screen
       input.addEventListener('focus', function () {
         d.querySelector('#resp').classList.remove('show');
       }, false);
+      
     };
 
     var _init = function () {
