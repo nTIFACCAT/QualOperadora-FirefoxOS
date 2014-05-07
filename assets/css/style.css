@@ -23,6 +23,7 @@ p {
 
 .body {
   background: url(../img/ui/fundo.jpg) no-repeat center top;
+  background-size: cover; 
   color: #fff;
   font-family: helvetica;
 }
