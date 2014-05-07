@@ -32,7 +32,8 @@
           tree += '<p><span>Portabilidade:</span> ' + data.portabilidade === true ? 'Sim' : 'Não' + '</p>';
           tree += '<p><span>Estado:</span> ' + data.estado + '</p>';
 
-          d.querySelector('#resp').innerHTML = tree;
+          d.querySelector('#resp-content').innerHTML = data.operadora;
+          d.querySelector('#resp').classList.add('show');
         } else {
           d.querySelector('#resp').innerHTML = 'Não encontramos nenhum registro';
         }
@@ -59,16 +60,26 @@
 
     };
 
+    var _bindInputFocus = function () {
+      var input = d.querySelector('#main__form-phone');
+
+      // hide resp when the keybord goes into the screen
+      input.addEventListener('focus', function () {
+        d.querySelector('#resp').classList.remove('show');
+      }, false);
+    };
+
+    var _init = function () {
+      _bindSubmit();
+      _bindInputFocus();
+    };
+
     return {
-      init: _bindSubmit
+      init: _init
     };
 
   })();
 
   Operadora.init();
 
-
 })(window, document);
-
-
-

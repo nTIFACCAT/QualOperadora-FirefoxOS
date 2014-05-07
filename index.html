@@ -4,27 +4,28 @@
   <meta charset="UTF-8">
   <title>Qual Operadora</title>
 
-  <link rel="stylesheet" href="assets/css/input_areas.css">
-  <link rel="stylesheet" href="assets/css/buttons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
-<body>
-  <div class="wrapper">
-    <form id="main__form">
-      <p>
-        <input type="text" id="main__form-phone" placeholder="DDD + Número" required="" onkeyup="mascara( this, mtel );" maxlength="15">
-      </p>
+<body class="body">
 
-      <p>
-        <button type="submit" class="recommend">Consultar</button>
-      </p>
-    </form>
+  <h1 class="app__name">Qual<span>Operadora</span></h1>
 
-    <div id="resp">
-    </div>
+  <form id="main__form">
+    <input type="text" id="main__form-phone" placeholder="DDD + Número" required onkeyup="mascara( this, mtel );" maxlength="15">
+
+    <button type="submit" id="main__form-submit">Consultar</button>
+  </form>
+
+  <div id="resp" class="transition">
+    <p>A operadora é: </p>
+    <span id="resp-content"></span>
+
+    <div id="resp-phone-call"></div>
   </div>
 
-  <script type="text/javascript" src="assets/js/util.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript" src="assets/js/util.js"></script>
+
 </body>
 </html>
