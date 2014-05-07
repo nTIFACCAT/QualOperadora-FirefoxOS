@@ -1,0 +1,14 @@
+{
+  "name": "Qual Operadora",
+  "description": "Aplicação do FirefoxOS para descobrir qual é a operadora de um número de telefone.",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/assets/img/icons/icon-60.png",
+    "128": "/assets/img/icons/icon-128.png"
+  },
+  "developer": {
+    "name": "nTI - Faccat",
+    "url": "https://github.com/nTIFACCAT"
+  },
+  "default_locale": "en"
+}
