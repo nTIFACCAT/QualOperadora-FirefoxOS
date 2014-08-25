@@ -1,5 +1,6 @@
 {
   "name": "Qual Operadora",
+  "version": "1.1",
   "description": "Aplicação do FirefoxOS para descobrir qual é a operadora de um número de telefone.",
   "launch_path": "/index.html",
   "icons": {
