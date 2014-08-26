@@ -19,17 +19,21 @@
         
         var data = JSON.parse(xhr.responseText);
 
-        if (data) {
+        if (data && data.operadora) {
 
           d.querySelector('#resp-content').innerHTML = data.operadora;
-          d.querySelector('#resp').classList.add('show');
+
+          d.querySelector('#not-found').classList.add("hidden");
+          d.querySelector('#found').classList.remove("hidden");
 
         } else {
 
-          d.querySelector('#resp').innerHTML = 'Não encontramos nenhum registro';
-        
+          d.querySelector('#found').classList.add("hidden");
+          d.querySelector('#not-found').classList.remove("hidden");
+
         }
 
+        d.querySelector('#resp').classList.add('show');
       };
 
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
