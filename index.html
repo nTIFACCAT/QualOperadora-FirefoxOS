@@ -5,7 +5,7 @@
   <title>QualOperadora</title>
 
   <meta name="keywords" content="aplicação, firefox os, operadora, telefone, web app, nti faccat">
-  <meta name="description" content="Aplicação do FirefoxOS para descobrir qual é a operadora de um número de telefone.">
+  <meta name="description" content="Descubra qual é a operadora de um número de telefone.">
 
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -15,16 +15,19 @@
   <h1 class="app__name">Qual<span>Operadora</span></h1>
 
   <form id="main__form">
-    <input type="tel" id="main__form-phone" placeholder="DDD + Número" required maxlength="11">
+    <input type="tel" id="main__form-phone" placeholder="DDD + Número" required maxlength="15">
 
     <button type="submit" id="main__form-submit">Consultar</button>
   </form>
 
   <div id="resp" class="transition">
-    <p>A operadora é: </p>
-    <span id="resp-content"></span>
+    <div id="found">
+      <p>A operadora é: </p>
+      <span id="resp-content"></span>
 
-    <div id="resp-phone-call"></div>
+      <div id="resp-phone-call"></div>      
+    </div>
+    <span id="not-found">Não encontramos nenhum registro</span>
   </div>
 
   <script type="text/javascript" src="assets/js/app.js"></script>

@@ -58,6 +58,7 @@ p {
   height: 40px;
   width: 90%;
   margin: 17px 0 0 5%;
+  font-size: 1em;
 }
 
 #resp {
@@ -85,4 +86,12 @@ p {
 
 #resp.show {
   bottom: 0;
+}
+
+#not-found {
+  font-size: 1em;
+}
+
+.hidden {
+  display: none;
 }
