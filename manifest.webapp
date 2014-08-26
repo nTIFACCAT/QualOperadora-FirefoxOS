@@ -1,15 +1,24 @@
 {
   "name": "Qual Operadora",
-  "version": "1.1",
-  "description": "Aplicação do FirefoxOS para descobrir qual é a operadora de um número de telefone.",
+  "version": "1.2",
+  "description": "Descubra qual é a operadora de um número de telefone brasileiro, fixo ou celular.",
   "launch_path": "/index.html",
   "icons": {
+    "16": "/assets/img/icons/icon-16.png",
     "60": "/assets/img/icons/icon-60.png",
-    "128": "/assets/img/icons/icon-128.png"
+    "64": "/assets/img/icons/icon-64.png",
+    "128": "/assets/img/icons/icon-128.png",
+    "256": "/assets/img/icons/icon-256.png",
+    "512": "/assets/img/icons/icon-512.png"
   },
   "developer": {
-    "name": "nTI - Faccat",
+    "name": "nTI - Faccat (Fernando Porazzi, Josias Schneider)",
     "url": "https://github.com/nTIFACCAT"
   },
-  "default_locale": "en"
+  "default_locale": "pt-BR",
+  "locales": {
+    "en": {
+      "description": "Find out the operator of a phone number"
+    }
+  }
 }
